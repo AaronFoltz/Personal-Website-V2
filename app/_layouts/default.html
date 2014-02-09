@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }} - Aaron Foltz - Father, Software Engineer, Technology Connoisseur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+    <script src="{{ site.url }}/_bowser_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 sidebar-width">
+            <div class="well sidebar-nav-fixed">
+                <a href="/index.html"><img src="{{ site.url }}/img/logo.svg" class="logo"/></a>
+
+                <ul class="left-nav" >
+                    {% if page.active == "home" %}
+                        <li class="button-item"><a href="/index.html" id="home" class="button active">Home</a></li>
+                    {% else %}
+                        <li class="button-item"><a href="/index.html" id="home" class="button">Home</a></li>
+                    {% endif %}
+                    {% if page.active == "about" %}
+                        <li class="button-item"><a href="/about.html" class="button active">About</a></li>
+                    {% else %}
+                        <li class="button-item"><a href="/about.html" class="button">About</a></li>
+                    {% endif %}
+                    {% if page.active == "projects" %}
+                        <li class="button-item"><a href="/projects.html" id="projects" class="button active">Projects</a></li>
+                    {% else %}
+                        <li class="button-item"><a href="/projects.html" id="projects" class="button">Projects</a></li>
+                    {% endif %}
+                    {% if page.active == "blog" %}
+                        <li class="button-item"><a href="/blog" id="blog" class="button active">Blog</a></li>
+                    {% else %}
+                        <li class="button-item"><a href="/blog" id="blog" class="button">Blog</a></li>
+                    {% endif %}
+                </ul>
+                <div id="icon-container">
+                    <div id="icon-inner-container">
+                        <a href="https://github.com/AaronFoltz"><div class='sprite github icons' alt="Github"></div></a>
+                        <a href="https://www.linkedin.com/in/aaronfoltz/"><div class='sprite linkedin icons' alt="LinkedIn"></div></a>
+                        <a href="https://www.facebook.com/afocakes?"><div class='sprite facebook icons' alt="Facebook"></div></a>
+                        <a href="https://twitter.com/Aaron_Foltz"><div class='sprite twitter icons' alt="Twitter"></div></a>
+                    </div>
+                </div>
+            </div> <!-- /sidebar -->
+        </div><!--/span-->
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
+    <div class="row">
+      <!-- Main Content Section -->
+      <div class="span9 span-fixed-sidebar">
+        <div id="content">
+          {{ content }}
+        </div>
+      </div><!--/span-->
+    </div>
+
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+
+    <script src="{{site.url}}/_bower_components/jquery/jquery.js"></script>
+    <script src="{{site.url}}/js/main.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-modal.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-transition.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-popover.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
+
+
+    <!-- {% if site.disqus_shortname and page.comments %}{% include disqus_comments.html %}{% endif %}
+    {% if page.share %}{% include share-widget.html %}{% endif %} -->
+  </body>
+</html>

@@ -1,0 +1,60 @@
+--- 
+layout: post
+title: "Textmate: Fixing Getbundles (Under Ruby 1.9.2)"
+categories: 
+- IDE
+- Mac OS X
+- Programming
+- Ruby
+- Software
+tags: 
+- bundles
+- getbundles
+- Integrated development environment
+- Programming
+- ruby
+- rvm
+- textmate
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  _yoast_wpseo_focuskw: ""
+  _yoast_wpseo_title: ""
+  _yoast_wpseo_metadesc: ""
+  _yoast_wpseo_metakeywords: ""
+  _yoast_wpseo_meta-robots-noindex: "0"
+  _yoast_wpseo_meta-robots-nofollow: "0"
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_bctitle: ""
+  _yoast_wpseo_sitemap-include: "-"
+  _yoast_wpseo_sitemap-prio: "-"
+  _yoast_wpseo_canonical: ""
+  _yoast_wpseo_redirect: ""
+  dsq_thread_id: "410654208"
+---
+<div class="zemanta-img" style="margin: 1em; display: block;">
+
+[caption id="" align="alignright" width="128" caption="Image via Wikipedia"]<a href="http://en.wikipedia.org/wiki/File:TextmateIcon.png"><img title="Application icon for TextMate" src="http://upload.wikimedia.org/wikipedia/en/a/a2/TextmateIcon.png" alt="Application icon for TextMate" width="128" height="128" /></a>[/caption]
+
+</div>
+The Getbundles Textmate bundle refuses to work under Ruby 1.9.2.  You will see a series of errors in the log file which can be seen by going to Bundles -&gt; GetBundles -&gt; Open Log File.
+
+If Bundles -&gt; GetBundles -&gt; Get Bundles is not working for you, you will probably see something similar to this in your log file:
+<pre>syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'</pre>
+To fix this problem and to make life easier in general, I would suggest downloading<a title=" RVM (Ruby Version Manager)" href="http://beginrescueend.com/"> RVM (Ruby Version Manager)</a>.  You can find install instructions <a title="here" href="http://beginrescueend.com/rvm/install/">here</a>.  Once installed, you only have to run a few commands to fix the GetBundles issue.
+<pre><code>rvm install 1.8.6</code></pre>
+<pre><code>rvm use 1.8.6 --default</code></pre>
+These commands will install Ruby version 1.8.6 and set it to your system default.  If you try  Bundles -&gt; GetBundles -&gt; Get Bundles again, it may work for you, or you might get another set of errors similar to:
+<pre>/Applications/TextMate.app/Contents/SharedSupport/Support/lib/osx/plist.bundle: dlopen(/Applications/TextMate.app/Contents/SharedSupport/Support/lib/osx/plist.bundle, 9): no suitable image found. Did find: (LoadError)</pre>
+To fix these errors, only three commands are needed:
+<pre>cd /Applications/TextMate.app/Contents/SharedSupport/Support/lib/osx/</pre>
+<pre>svn export http://svn.textmate.org/trunk/Support/lib/osx/keychain.bundle</pre>
+<pre>svn export http://svn.textmate.org/trunk/Support/lib/osx/plist.bundle</pre>
+&nbsp;
+<h6 class="zemanta-related-title" style="font-size: 1em;">Related articles</h6>
+<ul class="zemanta-article-ul">
+	<li class="zemanta-article-ul-li"><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-textmate-shortcuts-tips-and-techniques/">Essential TextMate Shortcuts, Tips and Techniques</a> (net.tutsplus.com)</li>
+</ul>
+<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/pixy.gif?x-id=764b9317-1d00-4006-bc9b-3d2de1fee3a4" alt="" /></div>

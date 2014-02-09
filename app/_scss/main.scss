@@ -1,0 +1,218 @@
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'sass-bootstrap/lib/responsive';
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 980px) {
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {
+        float: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.left-nav {
+    margin-left: 0;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.submenu {
+    list-style: none;
+    display: block;
+}
+
+a.button {
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    background-color: #3D4765;
+    border-color: #3D4765;
+    color: #fff;
+
+    padding-top: .5625em;
+    padding-bottom: .625em;
+    font-size: .8125em;
+
+    width: 100%;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+a.button:hover, a.button:focus {
+    background-color: #FE4B1C;
+    border-color: #FE4B1C;
+    width: 105%;
+}
+
+a.button.active {
+    background-color: #FE4B1C;
+    border-color: #FE4B1C;
+}
+
+.logo {
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+    height: 150px;
+    width: 150px;
+}
+
+.sidebar-nav-fixed {
+    position:fixed;
+    top: 100;
+    left: -10;
+    width: 200px;
+}
+
+.span-fixed-sidebar {
+    padding-left: 60px;
+    margin-left: 286px !important;
+    margin-top: -33px !important;
+}
+
+body {
+    background: url('../img/bg.png') repeat
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        position: relative;
+    }
+
+    .span-fixed-sidebar {
+        margin-left: auto !important;
+        margin-top: auto !important;
+        padding-left: 0;
+    }
+}
+
+.well {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #FE4B1C;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    display: block;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    background: url("../img/me-final.png");
+    width: 266px; height: 400px;
+    border: 1px solid #FE4B1C;
+}
+
+.icons {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+#icon-container {
+    text-align: center;
+    width: 100%;
+}
+
+#icon-inner-container {
+    display: inline-block;
+}
+
+.sprite {
+    background: url('../img/sprite.png') no-repeat top left;
+    float: left;
+    padding: 2px;
+}
+.sprite.facebook:hover { background-position: 8px 2px; width: 18px; height: 40px;  }
+.sprite.facebook { background-position: 8px -50px; width: 17px; height: 40px;  }
+.sprite.github:hover { background-position: 0px -95px; width: 37px; height: 40px;  }
+.sprite.github { background-position: 0px -140px; width: 36px; height: 40px;  }
+.sprite.linkedin:hover { background-position: 0px -189px; width: 37px; height: 40px;  }
+.sprite.linkedin { background-position: 0px -240px; width: 36px; height: 40px;  }
+.sprite.twitter:hover { background-position: 0px -284px; width: 38px; height: 40px;  }
+.sprite.twitter { background-position: 0px -326px; width: 36px; height: 40px;  }
+
+
+.about p {
+    font-weight: bold;
+}
+
+
+a.subbutton {
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    background-color: #3D4765;
+    border-color: #3D4765;
+    color: #fff;
+
+    padding-top: .5625em;
+    padding-bottom: .625em;
+    font-size: .8125em;
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: visible;
+}
+
+a.subbutton:hover, a.button:focus {
+    background-color: #FE4B1C;
+    border-color: #FE4B1C;
+    width: 105%;
+}
+
+a.subbutton.active {
+    background-color: #FE4B1C;
+    border-color: #FE4B1C;
+}
+
+.well ul li:hover > a, a.subbutton:visible {
+    width: 105%;
+}
+
+li.button-item {
+    margin-bottom: 1em;
+}

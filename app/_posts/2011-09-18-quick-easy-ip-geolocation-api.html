@@ -1,0 +1,61 @@
+--- 
+layout: post
+title: Quick & Easy IP Geolocation API
+categories: 
+- Google
+- Programming
+- Python
+tags: 
+- Application programming interface
+- Application programming interface key
+- comma-delimited
+- Geolocation API
+- Github
+- Google
+- http
+- IPInfoDB
+- MaxMind
+- Regular expression
+- request
+- United States
+- zip code
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  _yoast_wpseo_focuskw: ""
+  _yoast_wpseo_metadesc: ""
+  _yoast_wpseo_title: ""
+  _yoast_wpseo_metakeywords: ""
+  _yoast_wpseo_meta-robots-noindex: "0"
+  _yoast_wpseo_meta-robots-nofollow: "0"
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_bctitle: ""
+  _yoast_wpseo_sitemap-include: "-"
+  _yoast_wpseo_sitemap-prio: "-"
+  _yoast_wpseo_canonical: ""
+  _yoast_wpseo_redirect: ""
+  dsq_thread_id: "420554760"
+---
+I was searching around for project ideas last night, and came upon the idea of a simple weather utility for the <a class="zem_slink" title="Command-line interface" href="http://en.wikipedia.org/wiki/Command-line_interface" rel="wikipedia">command line</a>.  Upon searching, I found an already existing utility located <a title="CLIWeather" href="http://closure.ath.cx/cliweather" target="_blank">here</a>.  It seems to work perfectly fine when the user supplies the zip code, but in the case that the user doesn't, the <a title="MaxMind" href="www.maxmind.com" target="_blank">MaxMind</a> geolocation service used seems to fail.  Everything seemed to return perfectly fine except for the zip code, which is of course what actually matters when using Google's weather <a class="zem_slink" title="Application programming interface" href="http://en.wikipedia.org/wiki/Application_programming_interface" rel="wikipedia">API</a>.
+
+I didn't really see a manageable workaround for the issue, so I went on the hunt for a different provider.  I ended up stumbling across <a title="IPInfoDB" href="ipinfodb.com" target="_blank">IPInfoDB</a> which happened to be exactly what I needed.  By signing up and registering for your own API Key, you have easy access to their <a title="IP Geolocation" href="http://ipinfodb.com/ip_location_api.php" target="_blank">geolocation API</a>.
+
+In order to make a call, you can use the following URL:
+<pre>http://api.ipinfodb.com/v3/ip-city/?key=&lt;your_api_key&gt;</pre>
+The call will return a semicolon delimited location structure that looks much like this:
+<pre>OK;;24.255.126.76;US;UNITED STATES;VIRGINIA;HERNDON;20170;38.9424;-77.3911;05:00</pre>
+The good thing about this is that it also returns a status as the first entry in the data set, so you'll always be able to tell if it actually gathered a zip code.
+
+From this, you can easily use a <a class="zem_slink" title="Regular expression" href="http://en.wikipedia.org/wiki/Regular_expression" rel="wikipedia">Regular Expression</a> to gather the zip code:
+<pre>expression = "OK;;([^;]+;){5}(\w+)"</pre>
+To see the entire CLI Weather Program adapted from <a title="CLIWeather" href="http://closure.ath.cx/cliweather" target="_blank">http://closure.ath.cx/cliweather</a>, check it out on <a title="CLIWeather" href="https://github.com/AaronFoltz/cliweather" target="_blank">Github</a>.
+<h6 class="zemanta-related-title" style="font-size: 1em;">Related articles</h6>
+<ul class="zemanta-article-ul">
+	<li class="zemanta-article-ul-li"><a href="http://hacks.mozilla.org/2011/09/geolocation-explained-a-quick-screencast/">Geolocation explained - a quick screencast</a> (hacks.mozilla.org)</li>
+	<li class="zemanta-article-ul-li"><a href="http://uberblic.com/2011/08/one-api-to-link-them-all/">One API to Link Them All</a> (uberblic.com)</li>
+	<li class="zemanta-article-ul-li"><a href="http://news.cnet.com/8301-31921_3-20084285-281/researchers-probe-googles-geolocation-database/?part=rss&amp;subj=news">Researchers probe Google's geolocation database</a> (news.cnet.com)</li>
+	<li class="zemanta-article-ul-li"><a href="http://contrast.ie/blog/building-a-simple-ip-geolocation-service/">Building a simple IP geolocation service</a> (contrast.ie)</li>
+</ul>
+<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/pixy.gif?x-id=c9a17150-44d9-41a4-84f1-3f105e5aff89" alt="" /></div>

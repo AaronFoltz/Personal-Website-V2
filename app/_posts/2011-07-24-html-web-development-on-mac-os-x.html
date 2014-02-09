@@ -1,0 +1,47 @@
+--- 
+layout: post
+title: HTML Web Development on Mac OS X
+categories: 
+- Mac OS X
+- Software
+- Web
+tags: 
+- Mac OS X
+- Software
+- Web
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  dsq_thread_id: "397392936"
+---
+I wanted to jot down a few thoughts after finally finishing the bare interface/page portion of this design. Although the WYSIWYG editors are helpful in theory, I found that 90% of the time they don't work correctly or fail to render any CSS with the HTML.  I started out doing a general search for Dreamweaver alternatives for Mac OS X and ended up at <a href="http://blog.webdistortion.com/2008/04/12/webdesign-on-a-budget-six-free-alternatives-to-dreamweaver/">this</a> helpful website.
+<h4><strong>Kompozer</strong></h4>
+This is the first recommendation that I tried, and in the end it failed to fulfill my needs.  The HTML rendering seemed to be flawless, but my problem came with the CSS editor included with the software.  For the majority of the time, it seemed to be getting my main_style.css out of thin air.  I don't think it was every in sync with what was actually on the server, even after multiple attempts of trying to fix the problem.
+
+<strong>Amaya</strong>
+
+Coming from the W3C, I figured this editor would be destined to fit the bill, but in the end, it also fell short.  My main problem with this editor was the lack of FTP support and pitiful HTML rendering.  The rendering was extremely inconsistent with ALL other browsers.  Here is the current rendering of the homepage:
+
+<a href="http://www.aaronfoltz.com/blog/wp-content/uploads/2011/07/amaya.jpg"><img class="alignleft size-medium wp-image-10" title="amaya" src="http://www.aaronfoltz.com/blog/wp-content/uploads/2011/07/amaya-300x181.jpg" alt="" width="300" height="181" /></a>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+As you can see, the rendering isn't that far off, but it isn't great either.
+<h4><strong>Aptana Studio 3</strong></h4>
+Both the standalone install and Eclipse plugin are wonderful, but I found that the software just didn't "feel" right to me.  My only complaint is that Aptana features a preview browser that opens in a new tab.  Although this isn't horrible, it doesn't really work well when you want to split the window with the browser to see realtime changes.
+<h4><strong>Eclipse with WPT (<a href="http://www.eclipse.org/webtools/">Web Tools Platform</a>)</strong></h4>
+This almost seems like a better candidate than Aptana because it allows you to see a realtime preview on a horizontal split screen with the source.  Although it fixes the above problem, it also created a new rendering problem.
+<h4><strong>Conclusion</strong></h4>
+After downloading/trying all of these tools, none of them really worked the way I wanted them to.  At the end of the day, I found the perfect combination to be Cyberduck + Textmate.  Just double-click on the file in Cyberduck, edit in Textmate, and all your saves will automatically be updated on the server.  Doing ⌘R with the HTML bundle installed will refresh your running browsers, then you can quickly ⌘-Tab and see the changes immediately.
+<h4></h4>
+<h4></h4>

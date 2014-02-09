@@ -1,0 +1,48 @@
+--- 
+layout: post
+title: Eclipse Default Workspace Configuration
+categories: 
+- IDE
+- Mac OS X
+tags: 
+- Eclipse
+- Mac OS X
+- workspace
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  dsq_thread_id: "397387321"
+---
+<span style="font-family: 'Lucida Grande', sans-serif; font-size: 16px; line-height: 20px;">So I decided to tweak my Eclipse perspectives yesterday, and low and behold, my default workspace configuration seemed to be nullified. No matter what, Eclipse kept opening in /Users/aaron/Documents/workspace, so I figured it had to be set as the default somewhere. Even the "Prompt for workspace at startup" checkbox did nothing, it just seemed to ignore it.</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif; font-size: 16px; line-height: 20px;"><img src="http://farm7.static.flickr.com/6210/6056140836_c62817f706_m.jpg" alt="2011-08-18_0958" width="224" height="240" />
+</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;"><span style="font-size: 16px; line-height: 20px;">In order to fix this problem, you'll need to open up your local Eclipse installation. Look for the folder named "configuration":</span></span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">
+<img src="http://www.aaronfoltz.com/blog/wp-content/uploads/2011/08/eclipse_config.jpg" alt="eclipse_config.jpg" width="480" height="282" /></span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">
+</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">Once inside, open up the "config.ini" file:</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">
+<img src="http://www.aaronfoltz.com/blog/wp-content/uploads/2011/08/eclipse_configini.jpg" alt="eclipse_configini.jpg" width="480" height="277" /></span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">
+</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">You'll need to edit the line starting with osgi.instance.area.default to supply your desired default workspace. In this case, @user.home is the location of my unix home, or /Users/aaron.</span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">
+<img src="http://www.aaronfoltz.com/blog/wp-content/uploads/2011/08/configini.jpg" alt="configini.jpg" width="480" height="315" /></span>
+
+<span style="font-family: 'Lucida Grande', sans-serif;">References:</span>
+<ul>
+	<li><span class="Apple-style-span" style="font-family: 'Lucida Grande', sans-serif;"><a href="http://www.eclipsezone.com/eclipse/forums/t78109.rhtml">http://www.eclipsezone.com/eclipse/forums/t78109.rhtml</a></span></li>
+	<li><a href="http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fruntime-options.html">http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fruntime-options.html</a></li>
+</ul>
