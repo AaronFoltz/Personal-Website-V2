@@ -32,15 +32,9 @@ function addRepo(repo) {
 
   var $item = $("<div>").addClass("repo");
   $item.css('width', "45%");
-  // $item.css('width',  widths[Math.floor(Math.random()*widths.length)] + "%");
 
-  // items[Math.floor(Math.random()*items.length)];
   var $link = $("<a>").attr("href", repo.html_url).appendTo($item);
-  if (repo.fork) {
-      $link.append($("<h2>").text(repo.name).append($("<img>").attr('src', '/assets/img/fork.png')));
-  } else {
-      $link.append($("<h2>").text(repo.name));
-  }
+  $link.append($("<h2>").text(repo.name));
   $link.append($("<h3>").text(repo.language));
   $link.append($("<p>").text(repo.description));
   $item.appendTo("#repos");

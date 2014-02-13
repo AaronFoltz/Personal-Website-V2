@@ -8,7 +8,7 @@
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="{{ site.url }}/css/main.css">
     <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
-    <script src="{{ site.url }}/_bowser_components/modernizr/modernizr.js"></script>
+
   </head>
   <body>
     <div class="container-fluid">
@@ -74,7 +74,9 @@
 
 
     <script src="{{site.url}}/_bower_components/jquery/jquery.js"></script>
+    <script src="{{ site.url }}/_bower_components/modernizr/modernizr.js"></script>
     <script src="{{site.url}}/js/main.js"></script>
+    <script src="{{site.url}}/js/github.js"></script>
     <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
     <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
     <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
@@ -89,6 +91,16 @@
     <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
     <script src="{{site.url}}/_bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
 
+    {% if page.active == "projects" %}
+        <script src="{{site.url}}/_bower_components/masonry/masonry.pkgd.min.js"></script>
+        <script src="{{site.url}}/_bower_components/isotope/jquery.isotope.js"></script>
+        <script src="{{site.url}}/js/jquery.isotope.perfectmasonry.js"></script>
+        <script src="{{site.url}}/_bower_components/packery/packery.pkgd.min.js"></script>
+        <script src="{{site.url}}/_bower_components/nested/jquery.nested.js"></script>
+        <script type="text/javascript">
+            getGithubData();
+        </script>
+    {% endif %}
 
     <!-- {% if site.disqus_shortname and page.comments %}{% include disqus_comments.html %}{% endif %}
     {% if page.share %}{% include share-widget.html %}{% endif %} -->
