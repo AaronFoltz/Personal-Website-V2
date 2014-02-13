@@ -36,3 +36,8 @@ function toggleAccordion(li) {
         $('.submenu').slideToggle();
     }
 };
+
+function setupHeader()
+{
+    $("#mainHeader").fitText(1.2);
+}
