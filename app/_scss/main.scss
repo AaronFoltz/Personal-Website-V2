@@ -453,9 +453,26 @@ div#content {
     overflow:hidden;
 }
 
+/* Blog CSS */
+div.entry-summary, div.entry-content {
+    font-family: opensans-regular;
+    font-size: 130%;
+    line-height: 23px;
+}
 
+.blog-text {
+    font-family: opensans-regular;
+}
 
-
+.entry-tags {
+    display: block;
+    margin-top: 2em;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: opensans-regular;
+}
 
 
 
@@ -913,15 +930,6 @@ div#content {
     }
 }
 
-.entry-tags {
-    display: block;
-    margin-top: 2em;
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase
-}
-
 .entry-tags a {
     color: #222
 }
@@ -931,7 +939,7 @@ span+.entry-title {
 }
 
 .entry-title {
-    font-family: 'volkhov',serif;
+    font-family: opensans-regular;
     font-size: 36px;
     font-size: 2.25rem;
     font-style: italic;

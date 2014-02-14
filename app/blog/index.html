@@ -4,14 +4,14 @@ title: Latest Posts
 active: blog
 ---
 <div class="constrainedContent latestPosts">
-<h1>Recent Blog Posts</h1>
+<h1 class="blog-text">Recent Blog Posts</h1>
 
 {% for post in paginator.posts %}
 <article class="hentry post">
   <header>
     <h2 class="entry-title"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %B %d at %I:%M %p" }}</time></span>
+      <span class="entry-date blog-text date published updated"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %B %d at %I:%M %p" }}</time></span>
       <span rel="tag"><i class="fi-clock"></i> {{ post.content | reading_time }}</span>
       {% if post.categories %}
       <span rel="tag">
