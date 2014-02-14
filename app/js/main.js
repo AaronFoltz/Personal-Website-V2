@@ -24,13 +24,8 @@ function toggleAccordion(li) {
         li.removeClass('active');
         $('.submenu', li).slideToggle();
 
-        // $("li a#projects").css('margin-bottom', '1em');
     }
     else {
-        // Remove margin below hovered li
-        // $("li a#projects").css('margin-bottom', 0);
-
-        // $('li.active .submenu').slideDown();
         $('li.active').removeClass('active');
         li.addClass('active');
         $('.submenu').slideToggle();
