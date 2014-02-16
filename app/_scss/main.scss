@@ -175,7 +175,6 @@
     }
 
     div#content {
-        padding-left: 0px !important;
         padding-top: 60px !important;
         margin-top: 0px !important;
         text-align: center;
@@ -188,6 +187,7 @@
         border-bottom-right-radius: 10px;
         -webkit-border-bottom-right-radius: 10px;
         -moz-border-bottom-right-radius: 10px;
+        border: 1px solid #FE4B1C !important;
     }
 
     div.imageContainer, div.headerContainer {
@@ -195,6 +195,7 @@
     }
     div.imageContainer {
         float: none !important;
+        margin-top: 0px !important;
     }
 
     div.headerContainer {
@@ -315,15 +316,26 @@ body {
     border: 1px solid #FE4B1C;
     float: right;
     margin-right: 19px;
-    margin-top: 100px;
+    // margin-top: 100px;
 }
 
 .headerContainer {
-    margin-top: 200px;
+    //margin-top: 200px;
     margin-right: 300px;
-    height: 402px
+    height: 402px;
     /* Should match the image height */
+    position: relative;
 }
+p#mainHeader {
+    font-family: league_gothicregular;
+    width: 100%;
+    line-height: 75px;
+    color: #3D4765;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 .icons {
     height: 32px;
@@ -424,12 +436,6 @@ hr {
     background-color: #FE4B1C;
 }
 
-p#mainHeader {
-    font-family: league_gothicregular;
-    width: 100%;
-    line-height: 75px;
-    color: #3D4765;
-}
 
 span#name {
     font-size: 150%;
@@ -453,6 +459,66 @@ div#content {
     overflow:hidden;
 }
 
+/* Projects */
+#repos {
+    height: 300px;
+    text-align: center;
+}
+div.repo {
+    min-height: 190px;
+    background: #3D4765;
+    color: #fff;
+    margin-bottom: 10px;
+    max-width: 25%;
+    text-align: left;
+    display: inline-block;
+}
+
+div.repo > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+}
+
+div.repo a:hover {
+  background: #FE4B1C;
+}
+
+div.repo h2, div.repo h3, div.repo p {
+  margin: 10px 15px;
+}
+
+div.repo h2 {
+  margin-top: 15px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+div.repo h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.repo1:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #000000;
+  border-left: 110px solid #000000;
+  border-right: 110px solid #000000;
+  border-top: 5px solid #000000;
+  pointer-events: none;
+}
+
 /* Blog CSS */
 div.entry-summary, div.entry-content {
     font-family: opensans-regular;
@@ -473,6 +539,13 @@ div.entry-summary, div.entry-content {
     text-transform: uppercase;
     font-family: opensans-regular;
 }
+
+
+
+
+
+
+
 
 
 
@@ -1195,60 +1268,6 @@ span+.entry-title {
 
 
 
-#repos {
-    height: 300px;
-}
-div.repo {
-    height: 190px;
-    background: #3D4765;
-    color: #fff;
-    margin-bottom: 10px
-}
-
-div.repo > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
-}
-
-div.repo a:hover {
-  background: #FE4B1C;
-}
-
-div.repo h2, div.repo h3, div.repo p {
-  margin: 10px 15px;
-}
-
-div.repo h2 {
-  margin-top: 15px;
-  margin-bottom: 2px;
-  overflow: hidden;
-  font-size: 18px;
-}
-
-div.repo h3 {
-  font-size: 11px;
-  margin-top: 2px;
-  margin-bottom: 15px;
-  color: #999;
-}
-
-.repo1:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 5px solid #000000;
-  border-left: 110px solid #000000;
-  border-right: 110px solid #000000;
-  border-top: 5px solid #000000;
-  pointer-events: none;
-}
 
 
 

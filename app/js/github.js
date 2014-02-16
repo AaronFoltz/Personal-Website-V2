@@ -54,8 +54,8 @@ function setupProjects()
   var pckry = new Packery( container, {
     // options
     itemSelector: '.repo',
-    columnWidth: 25,
-    gutter: 5
+    columnWidth: ".repo",
+    gutter: 10
   });
 // $('#repos').isotope({
 //   // options
